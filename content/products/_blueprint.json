@@ -1,0 +1,13 @@
+{
+  "product": {
+    "sku": "my-product",
+    "title": "My Product",
+    "prices": [
+      {
+        "amount": "49.99",
+        "currency": "USD"
+      }
+    ],
+    "type": "ebook"
+  }
+}
