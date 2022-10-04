@@ -1,12 +1,15 @@
 <script>
 	export let title;
-
+  import { onMount } from "svelte";
   import GoCommerce from "gocommerce-js";
-  // This Causes a reference error, but without it you
-  //   can make an instance of GoCommerce in web browser on index page
-  // const commerce = new GoCommerce({
-  //   APIUrl: "http://localhost:9111"
-  // });
+
+  // This needs to happen clientside only.
+  // onMount prevents SSR from trying to evaluate this
+  onMount(async () => {
+    const commerce = new GoCommerce({
+      APIUrl: "http://localhost:9111"
+    });
+  });
 </script>
 
 <h1>{title}</h1>
